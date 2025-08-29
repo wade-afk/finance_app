@@ -50,54 +50,37 @@
         }
         
         .tabs {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
+            display: flex;
+            border-bottom: 2px solid var(--border-color);
             margin-bottom: 25px;
         }
 
         .tab-button {
-            padding: 16px 12px;
+            padding: 12px 20px;
             cursor: pointer;
-            border: 2px solid var(--border-color);
-            background-color: var(--background-color);
-            font-size: 14px;
+            border: none;
+            background-color: transparent;
+            font-size: 16px;
             font-weight: 500;
             color: #666;
-            border-radius: var(--border-radius);
-            transition: all 0.3s ease;
-            text-align: center;
-            min-height: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            line-height: 1.3;
-        }
-        
-        .tab-button:hover {
-            border-color: var(--primary-color);
-            background-color: rgba(74, 144, 226, 0.05);
+            position: relative;
+            transition: color 0.3s ease;
+            white-space: nowrap;
         }
         
         .tab-button.active {
             color: var(--primary-color);
             font-weight: 600;
-            border-color: var(--primary-color);
-            background-color: rgba(74, 144, 226, 0.1);
-            box-shadow: 0 2px 8px rgba(74, 144, 226, 0.2);
         }
 
-        /* 모바일에서 더 큰 터치 영역 */
-        @media (max-width: 768px) {
-            .tabs {
-                gap: 8px;
-            }
-            
-            .tab-button {
-                padding: 20px 8px;
-                font-size: 13px;
-                min-height: 70px;
-            }
+        .tab-button.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--primary-color);
         }
 
         .form-group {

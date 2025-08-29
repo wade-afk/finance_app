@@ -374,25 +374,25 @@ const App = () => {
                     className={`tab-button ${activeTab === 'basicCompound' ? 'active' : ''}`}
                     onClick={() => setActiveTab('basicCompound')}
                 >
-                    기본<br/>복리계산기
+                    기본 복리계산기
                 </button>
                 <button 
                     className={`tab-button ${activeTab === 'compound' ? 'active' : ''}`}
                     onClick={() => setActiveTab('compound')}
                 >
-                    적립식<br/>복리계산기
+                    적립식 복리 계산기
                 </button>
                 <button 
                     className={`tab-button ${activeTab === 'retirement' ? 'active' : ''}`}
                     onClick={() => setActiveTab('retirement')}
                 >
-                    은퇴자금<br/>계산기
+                    은퇴자금 계산기
                 </button>
                  <button 
                     className={`tab-button ${activeTab === 'howToBuild' ? 'active' : ''}`}
                     onClick={() => setActiveTab('howToBuild')}
                 >
-                    은퇴자금<br/>만들기
+                    은퇴자금을 만드려면
                 </button>
             </div>
 

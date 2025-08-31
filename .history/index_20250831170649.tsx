@@ -399,32 +399,6 @@ const App = () => {
                 }
             };
         }
-
-        // 모바일 광고
-        const mobileAdContainer = document.getElementById('mobile-ad');
-        if (mobileAdContainer && window.innerWidth <= 768) {
-            const script = document.createElement('script');
-            script.async = true;
-            script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9588119791313794';
-            script.crossOrigin = 'anonymous';
-            document.head.appendChild(script);
-            
-            script.onload = () => {
-                const adElement = document.createElement('ins');
-                adElement.className = 'adsbygoogle';
-                adElement.style.display = 'block';
-                adElement.setAttribute('data-ad-client', 'ca-pub-9588119791313794');
-                adElement.setAttribute('data-ad-slot', '3666030186');
-                adElement.setAttribute('data-ad-format', 'auto');
-                adElement.setAttribute('data-full-width-responsive', 'true');
-                
-                mobileAdContainer.appendChild(adElement);
-                
-                if (window.adsbygoogle) {
-                    window.adsbygoogle.push({});
-                }
-            };
-        }
     };
 
     useEffect(() => {
@@ -432,14 +406,15 @@ const App = () => {
     }, []);
 
     return (
-        <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', maxWidth: '1200px', margin: '0 auto', alignItems: 'flex-start' }}>
-            {/* 메인 콘텐츠 (왼쪽) */}
+        <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', maxWidth: '1200px', margin: '0 auto' }}>
+            {/* PC 버전 사이드바 광고 */}
+            <div className="sidebar-ad">
+                <div id="desktop-ad" className="ad-container desktop"></div>
+            </div>
+            
             <div className="main-content">
                 <div className="calculator-app">
                     <h1>은퇴 계산기</h1>
-                    
-                    {/* 모바일 광고 (제목 아래) */}
-                    <div id="mobile-ad" className="ad-container mobile"></div>
 
             <div className="tabs">
                 <button 
@@ -889,12 +864,7 @@ const App = () => {
             )}
                 </div>
             </div>
-            
-            {/* PC 버전 사이드바 광고 (오른쪽) */}
-            <div className="sidebar-ad">
-                <div id="desktop-ad" className="ad-container desktop"></div>
-            </div>
-        </div>
+        </>
     );
 };
 

@@ -3,66 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>은퇴 계산기 - 복리계산기, 금융계산기, 은퇴자금계산기</title>
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="무료 은퇴 계산기입니다. 복리계산기, 금융계산기, 은퇴자금계산기 기능을 제공합니다. 기본 복리계산, 적립식 복리계산, 은퇴자금 계산, 은퇴자금 만들기 계획을 한 번에 계산해보세요.">
-    <meta name="keywords" content="은퇴계산기, 복리계산기, 금융계산기, 은퇴자금계산기, 복리이자계산기, 적립식복리계산기, 은퇴준비, 은퇴자금, 투자계산기, 금융계산">
-    <meta name="author" content="은퇴 계산기">
-    <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="은퇴 계산기 - 복리계산기, 금융계산기, 은퇴자금계산기">
-    <meta property="og:description" content="무료 은퇴 계산기입니다. 복리계산기, 금융계산기, 은퇴자금계산기 기능을 제공합니다. 기본 복리계산, 적립식 복리계산, 은퇴자금 계산, 은퇴자금 만들기 계획을 한 번에 계산해보세요.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://your-domain.com">
-    <meta property="og:site_name" content="은퇴 계산기">
-    
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="은퇴 계산기 - 복리계산기, 금융계산기, 은퇴자금계산기">
-    <meta name="twitter:description" content="무료 은퇴 계산기입니다. 복리계산기, 금융계산기, 은퇴자금계산기 기능을 제공합니다.">
-    
-    <!-- Additional SEO Meta Tags -->
-    <meta name="language" content="ko">
-    <meta name="geo.region" content="KR">
-    <meta name="geo.country" content="Korea">
-    <meta name="distribution" content="global">
-    <meta name="rating" content="general">
-    <meta name="revisit-after" content="7 days">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://your-domain.com">
-    
-    <!-- Structured Data (Schema.org) -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebApplication",
-        "name": "은퇴 계산기",
-        "description": "무료 은퇴 계산기입니다. 복리계산기, 금융계산기, 은퇴자금계산기 기능을 제공합니다.",
-        "url": "https://your-domain.com",
-        "applicationCategory": "FinanceApplication",
-        "operatingSystem": "Web Browser",
-        "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "KRW"
-        },
-        "featureList": [
-            "기본 복리계산기",
-            "적립식 복리계산기", 
-            "은퇴자금계산기",
-            "은퇴자금 만들기 계획"
-        ],
-        "keywords": "은퇴계산기, 복리계산기, 금융계산기, 은퇴자금계산기, 복리이자계산기, 적립식복리계산기, 은퇴준비, 은퇴자금, 투자계산기, 금융계산",
-        "inLanguage": "ko",
-        "author": {
-            "@type": "Organization",
-            "name": "은퇴 계산기"
-        }
-    }
-    </script>
+    <title>은퇴 계산기</title>
     <style>
         :root {
             --primary-color: #4a90e2;
@@ -83,14 +24,15 @@
             padding: 20px;
             background-color: var(--secondary-color);
             color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
             min-height: 100vh;
         }
 
         #root {
             width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            min-height: 100vh;
+            max-width: 700px;
         }
 
         .calculator-app {
@@ -627,114 +569,6 @@
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
-
-        /* 광고 컨테이너 스타일 */
-        .ad-container {
-            margin: 20px 0;
-            text-align: center;
-            min-height: 90px;
-            max-height: 250px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #f8f9fa;
-            border-radius: var(--border-radius);
-            border: 1px solid var(--border-color);
-            overflow: hidden;
-        }
-
-        .ad-container.desktop {
-            display: none;
-        }
-
-        .ad-container.mobile {
-            display: block;
-        }
-
-        /* 광고 요소 반응형 설정 */
-        .ad-container ins {
-            max-width: 100% !important;
-            height: auto !important;
-        }
-
-        /* PC 버전에서 사이드바 광고 */
-        @media (min-width: 769px) {
-            .main-content {
-                flex: 1;
-                max-width: 700px;
-                margin-right: 20px;
-            }
-
-            .sidebar-ad {
-                width: 300px;
-                flex-shrink: 0;
-                position: sticky;
-                top: 0;
-                height: fit-content;
-                align-self: flex-start;
-                padding-top: 20px;
-            }
-
-            .ad-container.desktop {
-                display: block;
-                margin: 0;
-                min-height: 400px;
-                max-height: 600px;
-                position: relative;
-            }
-
-            .ad-container.mobile {
-                display: none;
-            }
-        }
-
-        /* 모바일에서 광고 최적화 */
-        @media (max-width: 768px) {
-            .ad-container.mobile {
-                margin: 15px 0;
-                min-height: 60px;
-                max-height: 120px;
-                max-width: 100%;
-                overflow: hidden;
-            }
-            
-            .ad-container.mobile ins {
-                max-width: 100% !important;
-                max-height: 120px !important;
-                height: auto !important;
-            }
-            
-            /* 모바일에서는 1열 레이아웃 */
-            #root > div {
-                flex-direction: column;
-                gap: 10px;
-                max-width: 100%;
-                padding: 0 10px;
-            }
-            
-            .sidebar-ad {
-                display: none;
-            }
-            
-            .main-content {
-                max-width: 100%;
-                margin-right: 0;
-                flex: none;
-            }
-        }
-
-        /* 매우 작은 화면에서 추가 최적화 */
-        @media (max-width: 480px) {
-            .ad-container.mobile {
-                margin: 10px 0;
-                min-height: 50px;
-                max-height: 100px;
-            }
-            
-            .ad-container.mobile ins {
-                max-height: 100px !important;
-            }
-        }
     </style>
 <script type="importmap">
 {
@@ -747,16 +581,9 @@
 }
 </script>
 <link rel="stylesheet" href="/index.css">
-
-
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9588119791313794"
-     crossorigin="anonymous"></script>
-
-
 </head>
 <body>
     <div id="root"></div>
-    
     <script type="module" src="index.tsx"></script>
 <script type="module" src="/index.tsx"></script>
 </body>

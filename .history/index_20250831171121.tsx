@@ -439,7 +439,20 @@ const App = () => {
                     <h1>은퇴 계산기</h1>
                     
                     {/* 모바일 광고 (제목 아래) */}
-                    <div id="mobile-ad" className="ad-container mobile"></div>
+                    <div className="ad-container mobile">
+                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9588119791313794"
+                             crossorigin="anonymous"></script>
+                        {/* bdmt_Header/footerAd_수평 */}
+                        <ins className="adsbygoogle"
+                             style={{display: 'block'}}
+                             data-ad-client="ca-pub-9588119791313794"
+                             data-ad-slot="3666030186"
+                             data-ad-format="auto"
+                             data-full-width-responsive="true"></ins>
+                        <script>
+                             (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                    </div>
 
             <div className="tabs">
                 <button 

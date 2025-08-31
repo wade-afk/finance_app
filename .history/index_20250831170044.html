@@ -83,14 +83,15 @@
             padding: 20px;
             background-color: var(--secondary-color);
             color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
             min-height: 100vh;
         }
 
         #root {
             width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            min-height: 100vh;
+            max-width: 700px;
         }
 
         .calculator-app {
@@ -627,114 +628,6 @@
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
-
-        /* 광고 컨테이너 스타일 */
-        .ad-container {
-            margin: 20px 0;
-            text-align: center;
-            min-height: 90px;
-            max-height: 250px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #f8f9fa;
-            border-radius: var(--border-radius);
-            border: 1px solid var(--border-color);
-            overflow: hidden;
-        }
-
-        .ad-container.desktop {
-            display: none;
-        }
-
-        .ad-container.mobile {
-            display: block;
-        }
-
-        /* 광고 요소 반응형 설정 */
-        .ad-container ins {
-            max-width: 100% !important;
-            height: auto !important;
-        }
-
-        /* PC 버전에서 사이드바 광고 */
-        @media (min-width: 769px) {
-            .main-content {
-                flex: 1;
-                max-width: 700px;
-                margin-right: 20px;
-            }
-
-            .sidebar-ad {
-                width: 300px;
-                flex-shrink: 0;
-                position: sticky;
-                top: 0;
-                height: fit-content;
-                align-self: flex-start;
-                padding-top: 20px;
-            }
-
-            .ad-container.desktop {
-                display: block;
-                margin: 0;
-                min-height: 400px;
-                max-height: 600px;
-                position: relative;
-            }
-
-            .ad-container.mobile {
-                display: none;
-            }
-        }
-
-        /* 모바일에서 광고 최적화 */
-        @media (max-width: 768px) {
-            .ad-container.mobile {
-                margin: 15px 0;
-                min-height: 60px;
-                max-height: 120px;
-                max-width: 100%;
-                overflow: hidden;
-            }
-            
-            .ad-container.mobile ins {
-                max-width: 100% !important;
-                max-height: 120px !important;
-                height: auto !important;
-            }
-            
-            /* 모바일에서는 1열 레이아웃 */
-            #root > div {
-                flex-direction: column;
-                gap: 10px;
-                max-width: 100%;
-                padding: 0 10px;
-            }
-            
-            .sidebar-ad {
-                display: none;
-            }
-            
-            .main-content {
-                max-width: 100%;
-                margin-right: 0;
-                flex: none;
-            }
-        }
-
-        /* 매우 작은 화면에서 추가 최적화 */
-        @media (max-width: 480px) {
-            .ad-container.mobile {
-                margin: 10px 0;
-                min-height: 50px;
-                max-height: 100px;
-            }
-            
-            .ad-container.mobile ins {
-                max-height: 100px !important;
-            }
-        }
     </style>
 <script type="importmap">
 {
@@ -756,7 +649,6 @@
 </head>
 <body>
     <div id="root"></div>
-    
     <script type="module" src="index.tsx"></script>
 <script type="module" src="/index.tsx"></script>
 </body>

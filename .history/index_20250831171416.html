@@ -651,12 +651,6 @@
             display: block;
         }
 
-        /* 광고 요소 반응형 설정 */
-        .ad-container ins {
-            max-width: 100% !important;
-            height: auto !important;
-        }
-
         /* PC 버전에서 사이드바 광고 */
         @media (min-width: 769px) {
             .main-content {
@@ -678,8 +672,7 @@
             .ad-container.desktop {
                 display: block;
                 margin: 0;
-                min-height: 400px;
-                max-height: 600px;
+                min-height: 600px;
                 position: relative;
             }
 
@@ -727,12 +720,7 @@
         @media (max-width: 480px) {
             .ad-container.mobile {
                 margin: 10px 0;
-                min-height: 50px;
-                max-height: 100px;
-            }
-            
-            .ad-container.mobile ins {
-                max-height: 100px !important;
+                min-height: 80px;
             }
         }
     </style>

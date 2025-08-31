@@ -90,7 +90,6 @@
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
-            min-height: 100vh;
         }
 
         .calculator-app {
@@ -633,14 +632,12 @@
             margin: 20px 0;
             text-align: center;
             min-height: 90px;
-            max-height: 250px;
             display: flex;
             justify-content: center;
             align-items: center;
             background-color: #f8f9fa;
             border-radius: var(--border-radius);
             border: 1px solid var(--border-color);
-            overflow: hidden;
         }
 
         .ad-container.desktop {
@@ -651,36 +648,33 @@
             display: block;
         }
 
-        /* 광고 요소 반응형 설정 */
-        .ad-container ins {
-            max-width: 100% !important;
-            height: auto !important;
-        }
-
         /* PC 버전에서 사이드바 광고 */
         @media (min-width: 769px) {
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                min-height: 100vh;
+                padding: 20px;
+            }
+
             .main-content {
-                flex: 1;
+                width: 100%;
                 max-width: 700px;
                 margin-right: 20px;
             }
 
             .sidebar-ad {
                 width: 300px;
-                flex-shrink: 0;
                 position: sticky;
-                top: 0;
+                top: 20px;
                 height: fit-content;
-                align-self: flex-start;
-                padding-top: 20px;
             }
 
             .ad-container.desktop {
                 display: block;
                 margin: 0;
-                min-height: 400px;
-                max-height: 600px;
-                position: relative;
+                min-height: 600px;
             }
 
             .ad-container.mobile {
@@ -692,47 +686,7 @@
         @media (max-width: 768px) {
             .ad-container.mobile {
                 margin: 15px 0;
-                min-height: 60px;
-                max-height: 120px;
-                max-width: 100%;
-                overflow: hidden;
-            }
-            
-            .ad-container.mobile ins {
-                max-width: 100% !important;
-                max-height: 120px !important;
-                height: auto !important;
-            }
-            
-            /* 모바일에서는 1열 레이아웃 */
-            #root > div {
-                flex-direction: column;
-                gap: 10px;
-                max-width: 100%;
-                padding: 0 10px;
-            }
-            
-            .sidebar-ad {
-                display: none;
-            }
-            
-            .main-content {
-                max-width: 100%;
-                margin-right: 0;
-                flex: none;
-            }
-        }
-
-        /* 매우 작은 화면에서 추가 최적화 */
-        @media (max-width: 480px) {
-            .ad-container.mobile {
-                margin: 10px 0;
-                min-height: 50px;
-                max-height: 100px;
-            }
-            
-            .ad-container.mobile ins {
-                max-height: 100px !important;
+                min-height: 100px;
             }
         }
     </style>
@@ -756,6 +710,22 @@
 </head>
 <body>
     <div id="root"></div>
+    
+    <!-- 모바일 광고 (상단) -->
+    <div class="ad-container mobile">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9588119791313794"
+             crossorigin="anonymous"></script>
+        <!-- bdmt_Header/footerAd_수평 -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-9588119791313794"
+             data-ad-slot="3666030186"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
     
     <script type="module" src="index.tsx"></script>
 <script type="module" src="/index.tsx"></script>
